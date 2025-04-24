@@ -1,4 +1,4 @@
-package application;
+﻿package application;
 
 import chess.ChessMatch;
 import chess.ChessPiece;
@@ -41,7 +41,7 @@ public class UI {
             
             return new ChessPosition(column, row);
         } catch (RuntimeException e) {
-            throw new InputMismatchException("Erro ao ler ao posi��o da mesa. Os valores v�lidos s�o de a1 a h8.");
+            throw new InputMismatchException("Erro ao ler ao posiÃ§Ã£o da mesa. Os valores vÃ¡lidos sÃ£o de a1 a h8.");
         }
     }
 
@@ -104,7 +104,7 @@ public class UI {
         final var branco = captured.stream().filter(x -> x.getColor() == Color.WHITE).toList();
         final var preto = captured.stream().filter(x -> x.getColor() == Color.BLACK).toList();
 
-        System.out.println("Pe�as capturadas:");
+        System.out.println("PeÃ§as capturadas:");
         System.out.print("Branco: ");
         System.out.print(ANSI_WHITE);
         System.out.println(Arrays.toString(branco.toArray()));

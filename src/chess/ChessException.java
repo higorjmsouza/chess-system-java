@@ -1,4 +1,4 @@
-package chess;
+﻿package chess;
 
 import boardgame.BoardException;
 

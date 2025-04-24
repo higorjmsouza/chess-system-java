@@ -1,4 +1,4 @@
-package application;
+﻿package application;
 
 import chess.ChessException;
 import chess.ChessMatch;
@@ -40,11 +40,11 @@ public class Program {
                 }
 
                 if (chessMatch.getPromoted() != null) {
-                    System.out.print("Inserir pe�a para promo��o (B/N/R/Q): ");
+                    System.out.print("Inserir peÃ§a para promoÃ§Ã£o (B/N/R/Q): ");
                     var type = sc.nextLine().toUpperCase();
 
                     while (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
-                        System.out.print("Valor inv�lido! Insira a pe�a para promo��o (B/N/R/Q): ");
+                        System.out.print("Valor invÃ¡lido! Insira a peÃ§a para promoÃ§Ã£o (B/N/R/Q): ");
                         type = sc.nextLine().toUpperCase();
                     }
                     chessMatch.replacePromotedPiece(type);

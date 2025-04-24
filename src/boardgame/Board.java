@@ -1,4 +1,4 @@
-package boardgame;
+ï»¿package boardgame;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -25,14 +25,14 @@ public class Board {
 
     public Piece piece(final int row, final int column) {
         if (!positionExists(row, column)) {
-            throw new BoardException("Posição fora do quadro");
+            throw new BoardException("PosiÃ§Ã£o fora do quadro");
         }
         return pieces[row][column];
     }
 
     public Piece piece(final Position position) {
         if (!positionExists(position)) {
-            throw new BoardException("Posição fora do quadro");
+            throw new BoardException("PosiÃ§Ã£o fora do quadro");
         }
         return pieces[position.getRow()][position.getColumn()];
     }
@@ -47,7 +47,7 @@ public class Board {
 
     public Piece removePiece(final Position position) {
         if (!positionExists(position)) {
-            throw new BoardException("Posição fora do quadro");
+            throw new BoardException("PosiÃ§Ã£o fora do quadro");
         }
 
         if (Objects.isNull(piece(position))) {
@@ -70,7 +70,7 @@ public class Board {
 
     public boolean thereIsAPiece(final Position position) {
         if (!positionExists(position)) {
-            throw new BoardException("Posição fora do quadro");
+            throw new BoardException("PosiÃ§Ã£o fora do quadro");
         }
         return Objects.nonNull(piece(position));
     }

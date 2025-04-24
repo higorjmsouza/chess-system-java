@@ -1,4 +1,4 @@
-package chess;
+Ôªøpackage chess;
 
 import boardgame.Board;
 import boardgame.Piece;
@@ -58,7 +58,7 @@ public class ChessMatch {
 
         if (testCheck(currentPlayer)) {
             undoMove(source, target, capturedPiece);
-            throw new ChessException("VocÍ n„o pode se colocar em xeque");
+            throw new ChessException("Voc√™ n√£o pode se colocar em xeque");
         }
 
         final var movedPiece = (ChessPiece) board.piece(target);
@@ -94,7 +94,7 @@ public class ChessMatch {
 
     public ChessPiece replacePromotedPiece(final String type) {
         if (Objects.isNull(promoted)) {
-            throw new IllegalStateException("N„o h· nenhuma peÁa para ser promovida");
+            throw new IllegalStateException("N√£o h√° nenhuma pe√ßa para ser promovida");
         }
         if (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
             return promoted;
@@ -212,19 +212,19 @@ public class ChessMatch {
 
     private void validateSourcePosition(final Position position) {
         if (!board.thereIsAPiece(position)) {
-            throw new ChessException("N„o h· nenhuma peÁa na posiÁ„o de origem");
+            throw new ChessException("N√£o h√° nenhuma pe√ßa na posi√ß√£o de origem");
         }
         if (currentPlayer != ((ChessPiece) board.piece(position)).getColor()) {
-            throw new ChessException("A peÁa escolhida n„o È sua");
+            throw new ChessException("A pe√ßa escolhida n√£o √© sua");
         }
         if (!board.piece(position).isThereAnyPossibleMove()) {
-            throw new ChessException("N„o h· movimentos possÌveis para a peÁa escolhida");
+            throw new ChessException("N√£o h√° movimentos poss√≠veis para a pe√ßa escolhida");
         }
     }
 
     private void validateTargetPosition(final Position source, final Position target) {
         if (!board.piece(source).possibleMove(target)) {
-            throw new ChessException("A peÁa escolhida n„o pode se mover para a posiÁ„o alvo");
+            throw new ChessException("A pe√ßa escolhida n√£o pode se mover para a posi√ß√£o alvo");
         }
     }
 
@@ -244,7 +244,7 @@ public class ChessMatch {
                 return (ChessPiece) p;
             }
         }
-        throw new IllegalStateException("N„o h· rei %s no tabuleiro".formatted(color));
+        throw new IllegalStateException("N√£o h√° rei %s no tabuleiro".formatted(color));
     }
 
     private boolean testCheck(final Color color) {

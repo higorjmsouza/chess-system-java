@@ -1,4 +1,4 @@
-﻿package boardgame;
+package boardgame;
 
 import lombok.Getter;
 import lombok.Setter;

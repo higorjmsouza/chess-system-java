@@ -38,10 +38,10 @@ public class UI {
             final var s = sc.nextLine();
             final var column = s.charAt(0);
             final var row = Integer.parseInt(s.substring(1));
-            
+
             return new ChessPosition(column, row);
         } catch (RuntimeException e) {
-            throw new InputMismatchException("Erro ao ler ao posiÃ§Ã£o da mesa. Os valores vÃ¡lidos sÃ£o de a1 a h8.");
+            throw new InputMismatchException("Erro ao ler ao posição da mesa. Os valores válidos são de a1 a h8.");
         }
     }
 
@@ -104,7 +104,7 @@ public class UI {
         final var branco = captured.stream().filter(x -> x.getColor() == Color.WHITE).toList();
         final var preto = captured.stream().filter(x -> x.getColor() == Color.BLACK).toList();
 
-        System.out.println("PeÃ§as capturadas:");
+        System.out.println("Peças capturadas:");
         System.out.print("Branco: ");
         System.out.print(ANSI_WHITE);
         System.out.println(Arrays.toString(branco.toArray()));

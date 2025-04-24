@@ -21,7 +21,7 @@ public class Program {
                 UI.clearScreen();
                 UI.printMatch(chessMatch, captured);
                 System.out.println();
-                System.out.print("Source: ");
+                System.out.print("Peça: ");
                 final var source = UI.readChessPosition(sc);
 
                 final var possibleMoves = chessMatch.possibleMoves(source);
@@ -30,7 +30,7 @@ public class Program {
                 UI.printBoard(chessMatch.getPieces(), possibleMoves);
 
                 System.out.println();
-                System.out.print("Target: ");
+                System.out.print("Destino: ");
                 final var target = UI.readChessPosition(sc);
 
                 final var capturedPiece = chessMatch.performChessMove(source, target);
@@ -40,11 +40,11 @@ public class Program {
                 }
 
                 if (chessMatch.getPromoted() != null) {
-                    System.out.print("Inserir peÃ§a para promoÃ§Ã£o (B/N/R/Q): ");
+                    System.out.print("Inserir peça para promoção (B/N/R/Q): ");
                     var type = sc.nextLine().toUpperCase();
 
                     while (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
-                        System.out.print("Valor invÃ¡lido! Insira a peÃ§a para promoÃ§Ã£o (B/N/R/Q): ");
+                        System.out.print("Valor inválido! Insira a peça para promoção (B/N/R/Q): ");
                         type = sc.nextLine().toUpperCase();
                     }
                     chessMatch.replacePromotedPiece(type);
